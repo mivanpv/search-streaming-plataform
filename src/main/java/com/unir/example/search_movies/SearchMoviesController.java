@@ -81,7 +81,7 @@ public class SearchMoviesController {
             throw new MovieSearchException("Error occurred while creating a movie: " + e.getMessage());
         }
     }
-    
+    {};
     @ExceptionHandler(MovieSearchException.class)
     public ResponseEntity<String> handleMovieSearchException(MovieSearchException e) {
         return ResponseEntity.status(500).body(e.getMessage());
